@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="text/html; charset=iso.8859-2" http-equiv="content-type">
+		<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style>
+			ul{
+			    list-style-type: none; 
+				padding:0;
+				margin: 0;
+				background-color:orangered ;
+				overflow: hidden;
+			}
+			li a {
+				padding: 10px 140px;
+			}
+			li {
+				float: left;
+			}
+			/* Navigation menu styling */
+			.navbar {
+			  width: 100%;
+			  background-color: orangered;
+			  overflow: auto;
+			}
+
+			/* Navigation links */
+			.navbar a {
+			  float: left;
+			  padding: 12px;
+			  color: white;
+			  text-decoration: none;
+			  font-size: 17px;
+			  width: 25%; 
+			  text-align: center;
+			}
+
+			/* Active link styling */
+			.navbar a.active {
+			  background-color:maroon;
+			}
+
+			/* Responsiveness for smaller screens */
+			@media screen and (max-width: 500px) {
+			  .navbar a {
+			    float: none;
+			    display: block;
+			    width: 100%;
+			    text-align: left;
+			  }
+
+			 /*Subscription form*/
+			.subform, .theSlides{
+				margin: 0;
+			}
+			/*Button*/
+			.w3-button{width: 100px;}
+            /*The footer*/
+			}
+			.footer {
+			  left: 0;
+			  bottom: 0;
+			  width: 100%;
+			  background-color: red;
+			  color: white;
+			  text-align: center;
+			}
+		</style>
+		<title>The FoodBallers</title>
+	</head>
+	<body>
+		<div>
+		<center><h1>The FoodBallers</h1></center><br>
+		</div>
+		<!--The Navigation Bar-->
+		<div class="navbar">
+		  <a class="active" href="#">Home</a>
+		  <a href="C:\Users\Emma\Desktop\Website Project\about.html">About Us</a>
+		  <a href="C:\Users\Emma\Desktop\Website Project\menu.html">Menu</a>
+		  <a href="C:\Users\Emma\Desktop\Website Project\contacts.html">Contacts</a>
+		</div>
+		<center><h3>A Unique Experience Awaits You</h3><center>
+		<p>The Foodballers is family-centred restaurant located in the outskirts of the "Green City in the Sun". Tucked away in a leafy suburb, it offers a culinary experience like no other</p>
+		<!--The Image Carousel-->
+		<div class="w3-content w3-display-container">
+			<img class="theSlides" src="https://images.pexels.com/photos/2635307/pexels-photo-2635307.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1"style="width: 100%;">
+			<img class="theSlides" src="https://images.pexels.com/photos/1833337/pexels-photo-1833337.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 2" style="width: 100%;">
+			<img class="theSlides" src="https://images.pexels.com/photos/590477/pexels-photo-590477.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 3" style="width: 100%;">
+			<img class="theSlides" src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Image 4 " style="width: 100%;">
+		</div>
+			<h3 style="background-color: salmon; margin: 0";>About us</h3>
+			<p style="background-color: salmon; margin:0">The Foodballers is a football-themed restaurant started in 2023 with a knack for great customer service and food that is out of this world.</p>
+		<div id="subform" style="background-color: darksalmon">
+			<form>
+				<h3>Become a foodballer!</h3>
+				<p>Sign up for our Newsletter</p>
+				<label>Name</label><br>
+				<input type="text" name="" class="input" placeholder="Your name"><br><br>
+				<label>Email address</label><br>
+				<input type="text" name="" class="input" placeholder="Your email address"><br>
+				<input type="checkbox" name="">
+				<label style="text font-size:10;">Receive News and Special offers(Optional)</label><br><br>
+				<button type="submit" class="w3-button w3-round-xxlarge w3-red ">Sign up</button>
+			</form>
+		<!--The Automation Functionality-->
+		<script>
+			let slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+			  let i;
+			  let slides = document.getElementsByClassName("theSlides");
+			  for (i = 0; i < slides.length; i++) {
+			    slides[i].style.display = "none";  
+			  }
+			  slideIndex++;
+			  if (slideIndex > slides.length) {slideIndex = 1}    
+			  slides[slideIndex-1].style.display = "block";  
+			  setTimeout(showSlides, 3000); // Change image every 2 seconds
+			}
+		</script>
+		<div class="footer">
+			<h1>The Foodballers&copy;</h1>
+			<p>This Website was proudly enginereed by <a href="https://github.com/Wazzicus"a>Emmanuel Abelle</a></p>
+		</div>
+		
+		
+	</body>
+</html>
